@@ -6,6 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .card {
@@ -25,6 +26,11 @@ body {
 .input-group input {
     border-radius: 4px 0 0 4px;
     border-right: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
 }
 
 .input-group-append button {
@@ -35,12 +41,24 @@ body {
     width: 120px;
 }
 
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
 .task-display {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 4px;
     display: none;
     animation: fadeIn 0.5s;
+    font-size: 1.2rem;
 }
 
 @keyframes slideIn {
