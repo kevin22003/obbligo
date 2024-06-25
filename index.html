@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obbligo o Verità</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Obbligo o Verità</h1>
-        <div class="input-section">
-            <h2>Aggiungi un Obbligo o una Verità</h2>
-            <input type="text" id="inputText" placeholder="Inserisci un obbligo o una verità">
-            <button onclick="addTask()">Aggiungi</button>
-        </div>
-        <div class="display-section">
-            <button class="action-button" onclick="showTask('obbligo')">Obbligo</button>
-            <button class="action-button" onclick="showTask('verità')">Verità</button>
-            <div id="taskDisplay" class="task-display"></div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title">Obbligo o Verità</h1>
+                <div class="input-section mt-4">
+                    <h2 class="h4">Aggiungi un Obbligo o una Verità</h2>
+                    <div class="input-group mt-3">
+                        <input type="text" id="inputText" class="form-control" placeholder="Inserisci un obbligo o una verità">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" onclick="addTask()"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-section mt-4">
+                    <button class="btn btn-success mr-2" onclick="showTask('obbligo')">Obbligo</button>
+                    <button class="btn btn-danger" onclick="showTask('verità')">Verità</button>
+                    <div id="taskDisplay" class="task-display mt-4 p-3"></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
