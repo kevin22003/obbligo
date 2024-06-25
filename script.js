@@ -20,10 +20,15 @@ function addTask() {
 
 function showTask(type) {
     const taskList = tasks[type];
+    const taskDisplay = document.getElementById('taskDisplay');
     if (taskList.length === 0) {
-        document.getElementById('taskDisplay').innerText = 'Nessun ' + type + ' disponibile.';
+        taskDisplay.innerText = 'Nessun ' + type + ' disponibile.';
     } else {
         const randomTask = taskList[Math.floor(Math.random() * taskList.length)];
-        document.getElementById('taskDisplay').innerText = randomTask;
+        taskDisplay.innerText = randomTask;
     }
+    taskDisplay.style.display = 'block';
+    taskDisplay.classList.remove('fadeIn');
+    void taskDisplay.offsetWidth; // Trigger reflow
+    taskDisplay.classList.add('fadeIn');
 }
