@@ -1,44 +1,78 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom, #2b1055, #7597de);
     margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #3c1053, #ad5389);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    color: #ffffff;
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 4px #000000;
+.container {
+    text-align: center;
 }
 
-.btn-light {
-    background-color: #ffffff;
-    color: #2b1055;
-    border: 2px solid #2b1055;
-    width: 120px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-light:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
+.title {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-out;
 }
 
 .task-display {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 2px solid #2b1055;
+    color: white;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    font-size: 1.2rem;
-    color: #2b1055;
+    display: none;
+    animation: fadeIn 1s ease-out;
 }
 
-.button-group button {
+.button-group {
+    margin-top: 50px;
+}
+
+.btn {
+    width: 150px;
+    padding: 10px;
     font-size: 1.2rem;
+    margin: 0 10px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeIn {
@@ -48,19 +82,4 @@ h1 {
     to {
         opacity: 1;
     }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(20%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.task-display.fadeIn {
-    animation: fadeIn 0.5s;
 }
