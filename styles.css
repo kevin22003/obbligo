@@ -1,58 +1,82 @@
-/* Background and overall layout */
 body {
-    background: linear-gradient(135deg, #1abc9c, #3498db);
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    overflow: hidden;
 }
 
-.container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-out;
 }
 
-/* Button styling */
-button {
-    background-color: #e74c3c;
-    color: white;
+.card-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #343a40;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.input-group input {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+}
+
+.input-group-append button {
+    border-radius: 0 4px 4px 0;
+    background-color: #007bff;
     border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover {
-    background-color: #c0392b;
+.input-group-append button:hover {
+    background-color: #0056b3;
     transform: scale(1.1);
 }
 
-/* Title styling */
-h1 {
-    font-size: 3em;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    animation: fadeInDown 1s ease;
+.btn-success {
+    width: 120px;
+    background-color: #28a745;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+.btn-danger {
+    width: 120px;
+    background-color: #dc3545;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+.task-display {
+    background-color: #ffffff;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    display: none;
+    animation: fadeIn 0.5s;
+    font-size: 1.2rem;
+    color: #343a40;
 }
 
 @keyframes fadeIn {
@@ -64,8 +88,13 @@ h1 {
     }
 }
 
-.container {
-    animation: fadeIn 1s ease;
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
-
-
