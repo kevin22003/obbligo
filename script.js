@@ -27,21 +27,6 @@ let tasks = {
     ]
 };
 
-function addTask() {
-    const inputText = document.getElementById('inputText').value.trim();
-    if (inputText) {
-        if (inputText.toLowerCase().includes('verità')) {
-            tasks.verità.push(inputText);
-        } else {
-            tasks.obbligo.push(inputText);
-        }
-        document.getElementById('inputText').value = '';
-        alert('Aggiunto con successo!');
-    } else {
-        alert('Inserisci un obbligo o una verità.');
-    }
-}
-
 function showTask(type) {
     const taskList = tasks[type];
     const taskDisplay = document.getElementById('taskDisplay');
@@ -52,7 +37,7 @@ function showTask(type) {
         taskDisplay.innerText = randomTask;
     }
     taskDisplay.style.display = 'block';
-    taskDisplay.classList.remove('fadeIn', 'bounce');
+    taskDisplay.classList.remove('fadeIn');
     void taskDisplay.offsetWidth; // Trigger reflow
-    taskDisplay.classList.add(type === 'obbligo' ? 'fadeIn' : 'bounce');
+    taskDisplay.classList.add('fadeIn');
 }
