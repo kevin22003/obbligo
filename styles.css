@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    background: linear-gradient(to right, #2b1055, #7597de);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -13,59 +13,38 @@ body {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
-    animation: fadeInUp 1s ease-out;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .card-title {
     font-weight: bold;
     font-size: 2.5rem;
-    color: #343a40;
-    animation: fadeIn 1.5s ease-in;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-.input-group input {
-    border-radius: 4px 0 0 4px;
-    border-right: none;
-    transition: border-color 0.3s;
-}
-
-.input-group input:focus {
-    border-color: #007bff;
-}
-
-.input-group-append button {
-    border-radius: 0 4px 4px 0;
-    background-color: #007bff;
+.btn-primary {
+    background-color: #1e90ff;
     border: none;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.input-group-append button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-}
-
-.btn-success {
     width: 120px;
-    background-color: #28a745;
-    border: none;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn-success:hover {
-    background-color: #218838;
+.btn-primary:hover {
+    background-color: #1c86ee;
     transform: scale(1.1);
 }
 
 .btn-danger {
-    width: 120px;
-    background-color: #dc3545;
+    background-color: #ff4500;
     border: none;
+    width: 120px;
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-danger:hover {
-    background-color: #c82333;
+    background-color: #e03b00;
     transform: scale(1.1);
 }
 
@@ -73,10 +52,12 @@ body {
     background-color: #ffffff;
     border: 2px solid #dee2e6;
     border-radius: 8px;
-    display: none;
-    animation: fadeIn 0.5s;
     font-size: 1.2rem;
     color: #343a40;
+}
+
+.button-group button {
+    font-size: 1.2rem;
 }
 
 @keyframes fadeIn {
@@ -99,18 +80,6 @@ body {
     }
 }
 
-@keyframes bounceIn {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-.task-display.bounce {
-    animation: bounceIn 1s;
+.task-display.fadeIn {
+    animation: fadeIn 0.5s;
 }
