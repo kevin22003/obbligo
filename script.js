@@ -52,7 +52,7 @@ function showTask(type) {
         taskDisplay.innerText = randomTask;
     }
     taskDisplay.style.display = 'block';
-    taskDisplay.classList.remove('fadeIn');
+    taskDisplay.classList.remove('fadeIn', 'bounce');
     void taskDisplay.offsetWidth; // Trigger reflow
-    taskDisplay.classList.add('fadeIn');
+    taskDisplay.classList.add(type === 'obbligo' ? 'fadeIn' : 'bounce');
 }
