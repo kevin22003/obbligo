@@ -4,32 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obbligo o Verità</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Obbligo o Verità</h1>
-        <button>Inizia</button>
-        <button>Opzioni</button>
-    </div>
-</body>
-<body>
+    <div class="background"></div>
     <div class="container mt-5">
         <div class="card">
             <div class="card-body text-center">
                 <h1 class="card-title">Obbligo o Verità</h1>
-                <div class="input-section mt-4">
-                    <h2 class="h4">Aggiungi un Obbligo o una Verità</h2>
-                    <div class="input-group mt-3">
-                        <input type="text" id="inputText" class="form-control" placeholder="Inserisci un obbligo o una verità">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" onclick="addTask()"><i class="fas fa-plus"></i></button>
-                        </div>
+                <div class="wheel-container mt-4">
+                    <div class="wheel" id="wheel">
+                        <div class="segment obbligo">Obbligo</div>
+                        <div class="segment verità">Verità</div>
                     </div>
+                    <button class="btn btn-primary mt-4" onclick="spinWheel()">Gira la Ruota</button>
                 </div>
                 <div class="display-section mt-4">
-                    <button class="btn btn-success mr-2" onclick="showTask('obbligo')">Obbligo</button>
-                    <button class="btn btn-danger" onclick="showTask('verità')">Verità</button>
                     <div id="taskDisplay" class="task-display mt-4 p-3"></div>
                 </div>
             </div>
