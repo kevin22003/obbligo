@@ -11,7 +11,7 @@ body {
 
 .card {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 10px;
     animation: fadeInUp 1s ease-out;
 }
@@ -94,7 +94,4 @@ body {
         opacity: 0;
     }
     to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+        transform: translateY(
