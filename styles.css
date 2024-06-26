@@ -1,59 +1,40 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #2b1055, #7597de);
+    background: linear-gradient(to bottom, #2b1055, #7597de);
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-}
-
-.card {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-}
-
-.card-title {
-    font-weight: bold;
-    font-size: 2.5rem;
     color: #ffffff;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 4px #000000;
 }
 
-.btn-primary {
-    background-color: #1e90ff;
-    border: none;
+.btn-light {
+    background-color: #ffffff;
+    color: #2b1055;
+    border: 2px solid #2b1055;
     width: 120px;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn-primary:hover {
-    background-color: #1c86ee;
-    transform: scale(1.1);
-}
-
-.btn-danger {
-    background-color: #ff4500;
-    border: none;
-    width: 120px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-danger:hover {
-    background-color: #e03b00;
+.btn-light:hover {
+    background-color: #f0f0f0;
     transform: scale(1.1);
 }
 
 .task-display {
-    background-color: #ffffff;
-    border: 2px solid #dee2e6;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #2b1055;
     border-radius: 8px;
     font-size: 1.2rem;
-    color: #343a40;
+    color: #2b1055;
 }
 
 .button-group button {
